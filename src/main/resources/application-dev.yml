@@ -1,8 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/critique-filmique
-    username: postgres
-    password: postgres
-  liquibase:
-    contexts: dev
-    change-log: classpath:db/changelog/master.xml
