@@ -4,14 +4,28 @@ public class MovieDto {
     private Long id;
     private String title;
     private String originalTitle;
+    private String shortDescription;
+    private String description;
+    private String youtubeTrailerId;
     private Integer releaseYear;
     private String genre;
     private boolean promoted;
 
-    public MovieDto(Long id, String title, String originalTitle, Integer releaseYear, String genre, boolean promoted) {
+    public MovieDto(Long id,
+                    String title,
+                    String originalTitle,
+                    String shortDescription,
+                    String description,
+                    String youtubeTrailerId,
+                    Integer releaseYear,
+                    String genre,
+                    boolean promoted) {
         this.id = id;
         this.title = title;
         this.originalTitle = originalTitle;
+        this.shortDescription = shortDescription;
+        this.description = description;
+        this.youtubeTrailerId = youtubeTrailerId;
         this.releaseYear = releaseYear;
         this.genre = genre;
         this.promoted = promoted;
@@ -41,6 +55,30 @@ public class MovieDto {
         this.originalTitle = originalTitle;
     }
 
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getYoutubeTrailerId() {
+        return youtubeTrailerId;
+    }
+
+    public void setYoutubeTrailerId(String youtubeTrailerId) {
+        this.youtubeTrailerId = youtubeTrailerId;
+    }
+
     public Integer getReleaseYear() {
         return releaseYear;
     }
@@ -63,14 +101,5 @@ public class MovieDto {
 
     public void setPromoted(boolean promoted) {
         this.promoted = promoted;
-    }
-
-    @Override
-    public String toString() {
-        return "Id=" + id +
-                ", " + title + '\'' +
-                ", genre='" + genre + '\'' +
-                ", promoted=" + promoted +
-                '}';
     }
 }
