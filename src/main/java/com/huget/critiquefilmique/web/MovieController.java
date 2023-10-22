@@ -2,10 +2,12 @@ package com.huget.critiquefilmique.web;
 
 import com.huget.critiquefilmique.domain.movie.MovieService;
 import com.huget.critiquefilmique.domain.movie.dto.MovieDto;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Optional;
 
