@@ -1,6 +1,5 @@
 package com.huget.critiquefilmique.web;
 
-import com.huget.critiquefilmique.domain.movie.MovieDtoMapper;
 import com.huget.critiquefilmique.domain.movie.MovieService;
 import com.huget.critiquefilmique.domain.movie.dto.MovieDto;
 import org.springframework.stereotype.Controller;
@@ -22,7 +21,7 @@ public class HomeController {
     public String home(Model model) {
         List<MovieDto> promotedMovies = movieService.findAllPromotedMovies();
         model.addAttribute("heading", "Promoted movies");
-        model.addAttribute("description", "Movies recommended by critique filmique team");
+        model.addAttribute("description", "Movies recommended by us");
         model.addAttribute("movies", promotedMovies);
         return "movie-listing";
     }

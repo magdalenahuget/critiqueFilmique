@@ -64,4 +64,14 @@ public class Movie {
     public void setPromoted(boolean promoted) {
         this.promoted = promoted;
     }
+
+    @Override
+    public String toString() {
+        return "Movie{" + id +
+                ". " + title + '\'' +
+                ", " + releaseYear +
+                ", genre=" + genre +
+                ", promoted=" + promoted +
+                '}';
+    }
 }

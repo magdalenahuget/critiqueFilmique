@@ -64,4 +64,13 @@ public class MovieDto {
     public void setPromoted(boolean promoted) {
         this.promoted = promoted;
     }
+
+    @Override
+    public String toString() {
+        return "Id=" + id +
+                ", " + title + '\'' +
+                ", genre='" + genre + '\'' +
+                ", promoted=" + promoted +
+                '}';
+    }
 }
